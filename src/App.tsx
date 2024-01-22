@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import HomePage from './components/pages/HomePage';
 
 /**
  * Root of the application. Contains global application-level providers not specific to app functionality,
@@ -8,7 +9,7 @@ import './App.css';
 const App: React.FC = () => {
     return (
         <>
-            Hello World
+            <HomePage />
         </>
     );
 };
