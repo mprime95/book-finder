@@ -1,4 +1,5 @@
 import React, {useContext} from 'react';
+import { TextField } from '@mui/material';
 import { bookSearchContext } from '../contexts/bookSearchContext';
 
 const SearchBar = () => {
@@ -15,7 +16,7 @@ const SearchBar = () => {
 
     return (
         <div className='container'>
-            <input type='search' onChange={handleChange} value={searchTerm} />
+            <TextField id="search-bar" variant="outlined" onChange={handleChange} value={searchTerm}/>
         </div>
     )
 }

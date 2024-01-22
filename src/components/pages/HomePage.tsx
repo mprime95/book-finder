@@ -7,12 +7,12 @@ const HomePage: React.FC = () => {
     return (
         <div className="home-page-section container" >
             <BookSearchProvider>
-            <div className="search-bar container">
-                <SearchBar />
-            </div>
-            <div className="results-section container">
+                <div className="search-bar container">
+                    <SearchBar />
+                </div>
+                <div className="results-section container">
 
-            </div>
+                </div>
             </BookSearchProvider>
         </div>
     )
