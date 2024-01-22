@@ -5,7 +5,9 @@
         "dom",
         "dom.iterable",
         "esnext"
-      ]
+      ],
+      "esModuleInterop": true,
+      "jsx": "react"
     },
     "include": [
       "src"
