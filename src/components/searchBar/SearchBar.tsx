@@ -2,6 +2,9 @@ import React, {useContext} from 'react';
 import { TextField } from '@mui/material';
 import { bookSearchContext } from '../contexts/bookSearchContext';
 
+/**
+ * Component to display search bar and retrieve user input
+ */
 const SearchBar = () => {
     const { searchTerm, setSearchTerm } = useContext(bookSearchContext);
 
