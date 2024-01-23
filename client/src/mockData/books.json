@@ -1,0 +1,26 @@
+{ 
+    "books": [
+        {
+            "title": "Sabriel",
+            "author": "Garth Nix",
+            "pubYear": 1995,
+            "series": "Abhorsen",
+            "coverImg": "https://prodimage.images-bn.com/pimages/9780062315557_p0_v1_s1200x630.jpg"
+        },
+        {
+            "title": "Lirael",
+            "author": "Garth Nix",
+            "pubYear": 2001,
+            "series": "Abhorsen",
+            "coverImg": "https://m.media-amazon.com/images/I/618IcNSwmgL._AC_UF1000,1000_QL80_.jpg"
+        
+        },
+        {
+            "title": "Sword of Destiny",
+            "author": "Andrzej Sapkowski",
+            "pubYear": 1992,
+            "series": "The Witcher",
+            "coverImg": "https://prodimage.images-bn.com/pimages/9780316453264_p0_v7_s1200x630.jpg"
+        }
+    ]
+}
