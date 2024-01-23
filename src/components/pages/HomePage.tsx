@@ -1,6 +1,7 @@
 import React from 'react';
 import BookSearchProvider from '../contexts/bookSearchContext';
 import SearchBar from '../searchBar/SearchBar';
+import BookList from '../bookList/BookList';
 
 const HomePage: React.FC = () => {
 
@@ -11,7 +12,7 @@ const HomePage: React.FC = () => {
                     <SearchBar />
                 </div>
                 <div className="results-section container">
-
+                    <BookList />
                 </div>
             </BookSearchProvider>
         </div>
