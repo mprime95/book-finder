@@ -9,7 +9,9 @@ import useApi from '../hooks/useApi';
  */
 const useBookResults = () => {
     const { searchTerm } = useContext(bookSearchContext);
-    const { data, loading, error } = useApi('books');
+    const { data, loading, error } = useApi('books', searchTerm.toLowerCase());
+
+    console.log(data, loading, error);
 
     return {
         data,

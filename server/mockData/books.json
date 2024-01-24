@@ -41,6 +41,48 @@
             "pubYear": 1994,
             "series": "The Witcher",
             "coverImg": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1589998653i/6043781.jpg"
+        },
+        {
+            "title": "The Lightning Thief",
+            "author": "Rick Riordan",
+            "pubYear": 2005,
+            "series": "Percy Jackson and the Olympians",
+            "coverImg": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1400602609i/28187.jpg"
+        },
+        {
+            "title": "The Sea of Monsters",
+            "author": "Rick Riordan",
+            "pubYear": 2006,
+            "series": "Percy Jackson and the Olympians",
+            "coverImg": "https://upload.wikimedia.org/wikipedia/en/thumb/4/46/PercySeamonsters.gif/220px-PercySeamonsters.gif"
+        },
+        {
+            "title": "The Titan's Curse",
+            "author": "Rick Riordan",
+            "pubYear": 2007,
+            "series": "Percy Jackson and the Olympians",
+            "coverImg": "https://upload.wikimedia.org/wikipedia/en/3/3c/The_titan%27s_curse.jpg"
+        },
+        {
+            "title": "The Battle of the Labyrinth",
+            "author": "Rick Riordan",
+            "pubYear": 2008,
+            "series": "Percy Jackson and the Olympians",
+            "coverImg": "https://upload.wikimedia.org/wikipedia/en/b/bf/PercyBattleLabyrinth.jpg"
+        },
+        {
+            "title": "The Last Olympian",
+            "author": "Rick Riordan",
+            "pubYear": 2009,
+            "series": "Percy Jackson and the Olympians",
+            "coverImg": "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Lastolympian.gif/220px-Lastolympian.gif"
+        },
+        {
+            "title": "Shades Children",
+            "author": "Garth Nix",
+            "pubYear": 1997,
+            "series": "",
+            "coverImg": "https://m.media-amazon.com/images/I/61eQ2tsUF8L._AC_UF1000,1000_QL80_.jpg"
         }
     ]
 }
