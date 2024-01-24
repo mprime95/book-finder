@@ -1,16 +1,14 @@
 import React, {useContext} from 'react';
 import {Paper, Table, TableContainer, TableCell, TableBody , TableHead, TableRow} from '@mui/material';
 import { bookSearchContext } from '../contexts/bookSearchContext';
-
-
-// TODO: remove mock data
-import books from '../../mockData/books.json';
+import useBookResults from '../hooks/useBookResults';
 
 /**
  * Component to display the list of books matching the user's current search term
  */
 const BookList = () => {
     const { searchTerm } = useContext(bookSearchContext);
+    const { data } = useBookResults();
 
     //TODO: remove log
     console.log(searchTerm);
@@ -26,9 +24,12 @@ const BookList = () => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {books.books.map((row) => (
+          {!data ? (
+          <>
+          loading
+          </>) :data.map((row) => (
             <TableRow
-              key={row.name}
+              key={row.title}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell component="th" scope="row">
