@@ -30,8 +30,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prettier": "echo '\nCorrecting styles...' && prettier --write \"src/**/*.{js,ts,tsx,scss}\"",
-    "lint": "echo '\nChecking for TS errors...' && eslint 'src/**/*.tsx' 'src/**/*.ts'"
+    "prettier": "prettier --write \"src/**/*.{js,ts,tsx,scss}\"",
+    "lint": "eslint \"src/**/*.{ts,tsx}\""
   },
   "eslintConfig": {
     "extends": [

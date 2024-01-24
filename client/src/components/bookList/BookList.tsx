@@ -1,7 +1,8 @@
-import React, {useContext} from 'react';
-import {Paper, Table, TableContainer, TableCell, TableBody , TableHead, TableRow} from '@mui/material';
+import React, { useContext } from 'react';
+import { Container, Grid } from '@mui/material';
 import { bookSearchContext } from '../contexts/bookSearchContext';
 import useBookResults from '../hooks/useBookResults';
+import BookCard from './BookCard';
 
 /**
  * Component to display the list of books matching the user's current search term
@@ -15,34 +16,21 @@ const BookList = () => {
 
     return (
         <div className="book-list-section">
-            <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
-        <TableHead>
-          <TableRow>
-            <TableCell>Title</TableCell>
-            <TableCell align="right">Author</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {!data ? (
-          <>
-          loading
-          </>) :data.map((row) => (
-            <TableRow
-              key={row.title}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-            >
-              <TableCell component="th" scope="row">
-                {row.title}
-              </TableCell>
-              <TableCell align="right">{row.author}</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+            <Container maxWidth="xl">
+                <Grid container md={12} flexDirection="row" spacing={3}>
+                    {!data ? (
+                        <>loading</>
+                    ) : (
+                        data.map((entry) => (
+                            <Grid item sm={4}>
+                                <BookCard currentBook={entry} />
+                            </Grid>
+                        ))
+                    )}
+                </Grid>
+            </Container>
         </div>
-    )
-}
+    );
+};
 
 export default BookList;

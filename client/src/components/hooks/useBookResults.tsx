@@ -1,4 +1,4 @@
-import  {useContext} from 'react';
+import { useContext } from 'react';
 import { bookSearchContext } from '../contexts/bookSearchContext';
 import useApi from '../hooks/useApi';
 
@@ -9,11 +9,11 @@ import useApi from '../hooks/useApi';
  */
 const useBookResults = () => {
     const { searchTerm } = useContext(bookSearchContext);
-    const { data, loading, error } = useApi('books'); 
+    const { data, loading, error } = useApi('books');
 
     return {
-        data
-    }
-}
+        data,
+    };
+};
 
 export default useBookResults;
