@@ -7,7 +7,7 @@ export interface BookSearchContext {
 
 const defaultContext: BookSearchContext = {
     searchTerm: '',
-    setSearchTerm: () =>{}
+    setSearchTerm: () => {},
 };
 
 export const bookSearchContext = createContext<BookSearchContext>(defaultContext);
@@ -24,12 +24,12 @@ const BookSearchProvider: React.FC = ({ children }) => {
         <Provider
             value={{
                 searchTerm,
-                setSearchTerm
+                setSearchTerm,
             }}
-            >
-                {children}
-            </Provider>
-    )
-}
+        >
+            {children}
+        </Provider>
+    );
+};
 
 export default BookSearchProvider;

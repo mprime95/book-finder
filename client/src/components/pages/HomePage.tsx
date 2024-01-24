@@ -4,9 +4,8 @@ import SearchBar from '../searchBar/SearchBar';
 import BookList from '../bookList/BookList';
 
 const HomePage: React.FC = () => {
-
     return (
-        <div className="home-page-section container" >
+        <div className="home-page-section container">
             <BookSearchProvider>
                 <div className="search-bar container">
                     <SearchBar />
@@ -16,7 +15,7 @@ const HomePage: React.FC = () => {
                 </div>
             </BookSearchProvider>
         </div>
-    )
-}
+    );
+};
 
 export default HomePage;

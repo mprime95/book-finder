@@ -13,7 +13,13 @@
             "pubYear": 2001,
             "series": "Abhorsen",
             "coverImg": "https://m.media-amazon.com/images/I/618IcNSwmgL._AC_UF1000,1000_QL80_.jpg"
-        
+        },
+        {
+            "title": "Abhorsen",
+            "author": "Garth Nix",
+            "pubYear": 2003,
+            "series": "Abhorsen",
+            "coverImg": "https://garthnix.com/wp-content/uploads/2022/01/us-cover-abhorsen-pichi-1.jpg"
         },
         {
             "title": "Sword of Destiny",
@@ -21,6 +27,20 @@
             "pubYear": 1992,
             "series": "The Witcher",
             "coverImg": "https://prodimage.images-bn.com/pimages/9780316453264_p0_v7_s1200x630.jpg"
+        },
+        {
+            "title": "The Last Wish",
+            "author": "Andrzej Sapkowski",
+            "pubYear": 1993,
+            "series": "The Witcher",
+            "coverImg": "https://d3525k1ryd2155.cloudfront.net/h/395/688/1444688395.0.x.jpg"
+        },
+        {
+            "title": "Blood of Elves",
+            "author": "Andrzej Sapkowski",
+            "pubYear": 1994,
+            "series": "The Witcher",
+            "coverImg": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1589998653i/6043781.jpg"
         }
     ]
 }
