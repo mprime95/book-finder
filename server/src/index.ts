@@ -1,9 +1,10 @@
 import express from 'express';
+import cors from 'cors';
 import books from '../mockData/books.json';
 
 const app = express();
 
-app.get("/books", (req, res, next) => {
+app.get("/books", cors(), (req, res, next) => {
     res.json(books.books);
    });
 
