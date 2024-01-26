@@ -8,6 +8,10 @@ app.listen(8080, () => {
   console.log('Server running on http://localhost:8080/');
 });
 
+/**
+ * /book endpoint to return all books that contain the search string within its title,
+ * author, or series
+ */
 app.get("/books", cors(), (req, res) => {
     try {
       console.log(req.query);
