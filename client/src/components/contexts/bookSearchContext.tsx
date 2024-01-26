@@ -18,7 +18,7 @@ const { Provider } = bookSearchContext;
  * @param children
  */
 const BookSearchProvider: React.FC = ({ children }) => {
-    const [searchTerm, setSearchTerm] = useState('');
+    const [searchTerm, setSearchTerm] = useState<string>('');
 
     return (
         <Provider

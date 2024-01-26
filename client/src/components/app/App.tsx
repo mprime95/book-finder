@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
-import HomePage from './components/pages/HomePage';
+import HomePage from '../pages/HomePage';
+import ModalProvider from '../contexts/modalContext';
 
 /**
  * Root of the application. Contains global application-level providers not specific to app functionality,
@@ -9,7 +10,9 @@ import HomePage from './components/pages/HomePage';
 const App: React.FC = () => {
     return (
         <>
-            <HomePage />
+            <ModalProvider>
+                <HomePage />
+            </ModalProvider>
         </>
     );
 };
