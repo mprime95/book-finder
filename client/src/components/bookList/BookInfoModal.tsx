@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Box, Button, Grid, Modal, Typography } from '@mui/material';
 import { Book } from '../../types/types';
+import { favBookContext } from '../contexts/favBookContext';
 
 interface BookInfoModalProps {
     open: boolean;
@@ -9,6 +10,30 @@ interface BookInfoModalProps {
 }
 
 const BookInfoModal: React.FC<BookInfoModalProps> = ({ open, handleClose, book }) => {
+    const { favourites, setFavourites } = useContext(favBookContext);
+    const [isFavourite, setIsFavourite] = useState<boolean>(false);
+
+    useEffect(() => {
+        setIsFavourite(false);
+        for (let i = 0; i < favourites.length; i++) {
+            if (favourites[i].title === book.title) {
+                setIsFavourite(true);
+            }
+        }
+
+        console.log(isFavourite, favourites);
+    }, [isFavourite, book, favourites]);
+
+    const handleClick = () => {
+        if (!isFavourite) {
+            setFavourites([...favourites, book]);
+            setIsFavourite(true);
+        } else {
+            setFavourites(favourites.filter((fav) => fav.title !== book.title));
+            setIsFavourite(false);
+        }
+    };
+
     return (
         <>
             {!!open && (
@@ -51,8 +76,15 @@ const BookInfoModal: React.FC<BookInfoModalProps> = ({ open, handleClose, book }
                                 <Typography id="modal-modal-description" sx={{ mt: 2 }}>
                                     Publication Year: {book.pubYear}
                                 </Typography>
-
-                                <Button variant="contained">Add to favourites</Button>
+                                {!isFavourite ? (
+                                    <Button variant="contained" onClick={handleClick}>
+                                        Add to favourites
+                                    </Button>
+                                ) : (
+                                    <Button variant="contained" onClick={handleClick}>
+                                        Remove from favourites
+                                    </Button>
+                                )}
                             </Grid>
                         </Grid>
                     </Box>

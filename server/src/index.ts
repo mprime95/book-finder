@@ -14,7 +14,6 @@ app.listen(8080, () => {
  */
 app.get("/books", cors(), (req, res) => {
     try {
-      console.log(req.query);
       let response = [];
       if(req.query.search !== undefined) {
         response = books.books.filter((item) => {
