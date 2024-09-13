@@ -14,7 +14,7 @@ import Header from '../../header/Header';
  */
 const App: React.FC = () => {
     return (
-        <>
+        <div>
             <FavBookProvider>
                 <ModalProvider>
                     <BrowserRouter basename="/">
@@ -30,7 +30,7 @@ const App: React.FC = () => {
                     </BrowserRouter>
                 </ModalProvider>
             </FavBookProvider>
-        </>
+        </div>
     );
 };
 
