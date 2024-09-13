@@ -1,6 +1,6 @@
 /* Internal Routes */
 const ROUTES = {
-    dashboard: '/dashboard',
+    dashboard: '/',
     favourites: '/favourites',
     login: '/login',
 };
