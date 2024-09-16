@@ -17,7 +17,7 @@ const HomePage: React.FC = () => {
     };
 
     return (
-        <div className="home-page-section container">
+        <div className="home-page-section container dark:bg-slate-800">
             <BookSearchProvider>
                 <div className="search-bar container">
                     <SearchBar />

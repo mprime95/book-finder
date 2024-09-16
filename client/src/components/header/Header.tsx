@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import { AppBar, Box, Button, Toolbar, Typography, IconButton, Menu, MenuItem } from '@mui/material';
 import { AccountCircle } from '@mui/icons-material';
 import { useHistory } from 'react-router-dom';
 import ROUTES from '../app/constants/routes';
+import DarkModeToggle from './DarkModeToggle';
 
 /**
  * Component to display global page header and navbar
@@ -18,6 +19,10 @@ const Header: React.FC = () => {
             link: '/',
         },
     ];
+
+    useEffect(() => {
+        console.log('user: ', user);
+    }, [user]);
 
     const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorEl(event.currentTarget);
@@ -69,10 +74,21 @@ const Header: React.FC = () => {
                                     open={Boolean(anchorEl)}
                                     onClose={handleClose}
                                 >
-                                    <MenuItem onClick={() => {
-                                        history.push(ROUTES.favourites)
-                                    }}>Favourites</MenuItem>
-                                    <MenuItem onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Log Out</MenuItem>
+                                    <MenuItem
+                                        onClick={() => {
+                                            history.push(ROUTES.favourites);
+                                        }}
+                                    >
+                                        Favourites
+                                    </MenuItem>
+                                    <MenuItem onClick={() => {}}>
+                                        <DarkModeToggle />
+                                    </MenuItem>
+                                    <MenuItem
+                                        onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}
+                                    >
+                                        Log Out
+                                    </MenuItem>
                                 </Menu>
                             </div>
                         ) : (
