@@ -10,14 +10,14 @@ const root = createRoot(document.getElementById('root'));
 
 root.render(
     <Provider store={store}>
-    <Auth0Provider
-        domain="dev-gum3edpumyws630p.us.auth0.com"
-        clientId="55eLbEhv0ayZdiy5wVqZ4eYENTRMMgGv"
-        authorizationParams={{
-            redirect_uri: window.location.origin,
-        }}
-    >
-        <App />
-    </Auth0Provider>
-    </Provider>
+        <Auth0Provider
+            domain="dev-gum3edpumyws630p.us.auth0.com"
+            clientId="55eLbEhv0ayZdiy5wVqZ4eYENTRMMgGv"
+            authorizationParams={{
+                redirect_uri: window.location.origin,
+            }}
+        >
+            <App />
+        </Auth0Provider>
+    </Provider>,
 );
