@@ -5,6 +5,8 @@ import { AccountCircle } from '@mui/icons-material';
 import { useHistory } from 'react-router-dom';
 import ROUTES from '../app/constants/routes';
 import DarkModeToggle from './DarkModeToggle';
+import SearchBar from '../searchBar/SearchBar';
+import { MenuList } from '@mui/material';
 
 /**
  * Component to display global page header and navbar
@@ -35,7 +37,7 @@ const Header: React.FC = () => {
     return (
         <div className="header-section">
             <Box sx={{ flexGrow: 1 }}>
-                <AppBar position="static">
+                <AppBar position="static" className="bg-indigo-500">
                     <Toolbar>
                         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                             Book Finder
@@ -60,32 +62,29 @@ const Header: React.FC = () => {
                                     <AccountCircle />
                                 </IconButton>
                                 <Menu
-                                    id="menu-appbar"
                                     anchorEl={anchorEl}
-                                    anchorOrigin={{
-                                        vertical: 'top',
-                                        horizontal: 'right',
-                                    }}
-                                    keepMounted
-                                    transformOrigin={{
-                                        vertical: 'top',
-                                        horizontal: 'right',
-                                    }}
+                                    id="account-menu"
                                     open={Boolean(anchorEl)}
                                     onClose={handleClose}
+                                    MenuListProps={{ sx: { py: 0 } }}
                                 >
                                     <MenuItem
                                         onClick={() => {
                                             history.push(ROUTES.favourites);
                                         }}
+                                        className="bg-indigo-200 dark:bg-deep-purple-900 dark:text-white hover:bg-indigo-400 hover:text-white"
                                     >
                                         Favourites
                                     </MenuItem>
-                                    <MenuItem onClick={() => {}}>
+                                    <MenuItem
+                                        onClick={() => {}}
+                                        className="bg-indigo-200 dark:bg-deep-purple-900 dark:text-white hover:bg-indigo-400 hover:text-white"
+                                    >
                                         <DarkModeToggle />
                                     </MenuItem>
                                     <MenuItem
                                         onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}
+                                        className="bg-indigo-200 dark:bg-deep-purple-900 dark:text-white hover:bg-indigo-400 hover:text-white"
                                     >
                                         Log Out
                                     </MenuItem>
