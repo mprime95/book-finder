@@ -22,7 +22,7 @@ const BookCard: React.FC<BookCardProps> = ({ currentBook }) => {
 
     return (
         <div className="book-card">
-            <Card sx={{ display: 'flex' }} elevation={7}>
+            <Card sx={{ display: 'flex' }} elevation={7} className=" dark:bg-gray-900">
                 <CardActionArea onClick={handleClick}>
                     <Box sx={{ display: 'flex', flexDirection: 'row' }}>
                         <CardMedia
@@ -33,10 +33,15 @@ const BookCard: React.FC<BookCardProps> = ({ currentBook }) => {
                         />
                         <Box sx={{ display: 'flex', flexDirection: 'row' }}>
                             <CardContent sx={{ flex: '1 0 auto' }}>
-                                <Typography component="div" variant="h5" text="wrap">
+                                <Typography component="div" variant="h5" text="wrap" className="dark:text-white">
                                     {currentBook.title}
                                 </Typography>
-                                <Typography variant="subtitle1" color="text.secondary" component="div">
+                                <Typography
+                                    variant="subtitle1"
+                                    color="text.secondary"
+                                    component="div"
+                                    className="dark:text-gray-400"
+                                >
                                     {currentBook.author}
                                 </Typography>
                             </CardContent>

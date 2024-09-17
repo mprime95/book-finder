@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
-import { TextField } from '@mui/material';
+import { TextField, FormControl } from '@mui/material';
 import { bookSearchContext } from '../contexts/bookSearchContext';
+import { Container } from '@mui/material';
 
 /**
  * Component to display search bar and retrieve user input
@@ -14,8 +15,12 @@ const SearchBar = () => {
     };
 
     return (
-        <div className="container">
-            <TextField id="search-bar" variant="outlined" onChange={handleChange} value={searchTerm} />
+        <div className="pt-8">
+            <Container>
+                <FormControl fullWidth sx={{ m: 1 }}>
+                    <TextField id="search-bar" variant="outlined" onChange={handleChange} value={searchTerm} sx={{ bgcolor: 'white'}}/>
+                </FormControl>
+            </Container>
         </div>
     );
 };

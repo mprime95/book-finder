@@ -17,12 +17,12 @@ const HomePage: React.FC = () => {
     };
 
     return (
-        <div className="home-page-section container dark:bg-slate-800">
+        <div>
             <BookSearchProvider>
-                <div className="search-bar container">
+                <div className="search-bar">
                     <SearchBar />
                 </div>
-                <div className="results-section container">
+                <div className="results-section">
                     <BookList />
                 </div>
                 <BookInfoModal open={isModalOpen} handleClose={handleClose} book={bookInfo} />

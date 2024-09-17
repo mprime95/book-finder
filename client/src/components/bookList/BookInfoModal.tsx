@@ -49,7 +49,7 @@ const BookInfoModal: React.FC<BookInfoModalProps> = ({ open, handleClose, book }
                             top: '50%',
                             left: '50%',
                             transform: 'translate(-50%, -50%)',
-                            width: 450,
+                            width: 650,
                             bgcolor: 'background.paper',
                             border: '2px solid #000',
                             boxShadow: 24,
@@ -57,31 +57,42 @@ const BookInfoModal: React.FC<BookInfoModalProps> = ({ open, handleClose, book }
                             display: 'flexbox',
                             flexDirection: 'row',
                         }}
+                        className="dark:bg-gray-900"
                     >
                         <Grid container xs={12} spacing={4}>
                             <Grid item xs={6}>
                                 <img src={book.coverImg} width={200} height={300} alt={book.title} />
                             </Grid>
                             <Grid item xs={6}>
-                                <Typography id="modal-modal-title" variant="h4" component="h2">
+                                <Typography
+                                    id="modal-modal-title"
+                                    variant="h4"
+                                    component="h2"
+                                    className="dark:text-white"
+                                >
                                     {book.title}
                                 </Typography>
 
-                                <Typography id="modal-modal-title" variant="h6" component="h2">
+                                <Typography
+                                    id="modal-modal-title"
+                                    variant="h6"
+                                    component="h2"
+                                    className="dark:text-white"
+                                >
                                     {book.author}
                                 </Typography>
-                                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                                <Typography id="modal-modal-description" sx={{ mt: 2 }} className="dark:text-white">
                                     Series: {book.series}
                                 </Typography>
-                                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                                <Typography id="modal-modal-description" sx={{ mt: 2 }} className="dark:text-white">
                                     Publication Year: {book.pubYear}
                                 </Typography>
                                 {!isFavourite ? (
-                                    <Button variant="contained" onClick={handleClick}>
+                                    <Button variant="contained" onClick={handleClick} className="bg-indigo-700">
                                         Add to favourites
                                     </Button>
                                 ) : (
-                                    <Button variant="contained" onClick={handleClick}>
+                                    <Button variant="contained" onClick={handleClick} className="bg-indigo-700">
                                         Remove from favourites
                                     </Button>
                                 )}

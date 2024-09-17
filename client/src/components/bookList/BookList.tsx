@@ -26,9 +26,9 @@ const BookList: React.FC<BookListProps> = ({ favouritesOnly = false }) => {
     console.log(searchTerm);
 
     return (
-        <div className="book-list-section">
+        <div className="book-list-section object-center py-8">
             <Container maxWidth="xl">
-                <Grid container md={12} flexDirection="row" spacing={3}>
+                <Grid container flexDirection="row" spacing={3}>
                     {!data ? (
                         <>loading</>
                     ) : (
